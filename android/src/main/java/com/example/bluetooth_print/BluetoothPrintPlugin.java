@@ -319,7 +319,7 @@ public class BluetoothPrintPlugin implements FlutterPlugin, ActivityAware, Metho
   /**
    * 连接
    */
-  private void connect(Result result, Map<String, Object> args){
+  private void connect(final Result result, Map<String, Object> args){
     if (args.containsKey("address")) {
       String address = (String) args.get("address");
       disconnect();

@@ -54,4 +54,6 @@ class LineText {
   factory LineText.fromJson(Map<String, dynamic> json) =>
       _$LineTextFromJson(json);
   Map<String, dynamic> toJson() => _$LineTextToJson(this);
+
+  // abc
 }

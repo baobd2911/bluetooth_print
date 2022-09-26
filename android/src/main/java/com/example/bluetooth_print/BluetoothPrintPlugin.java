@@ -337,10 +337,16 @@ public class BluetoothPrintPlugin implements FlutterPlugin, ActivityAware, Metho
         @Override
         public void run() {
           DeviceConnFactoryManager.getDeviceConnFactoryManagers()[id].openPort();
+          boolean isOpenPort = DeviceConnFactoryManager.getDeviceConnFactoryManagers()[id].isOpenPort();
+          if(isOpenPort){
+            result.success(true);
+          }else{
+            result.success(false);
+          }
         }
       });
 
-      result.success(true);
+//      result.success(true);
     } else {
       result.error("invalid_argument", "argument 'address' not found", null);
     }

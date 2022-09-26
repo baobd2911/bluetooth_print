@@ -142,6 +142,10 @@ public class DeviceConnFactoryManager {
         return deviceConnFactoryManagers;
     }
 
+    public boolean isOpenPort(){
+        return isOpenPort;
+    }
+
     /**
      * 打开端口
      *
